@@ -3,8 +3,6 @@ package com.sstefanov.currencies.gateway.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Table(name = "request_statistics")
 @Data
@@ -25,5 +23,4 @@ public class RequestInfo {
 
     @Column(name = "client_id", nullable = false)
     private String clientId;
-
 }
