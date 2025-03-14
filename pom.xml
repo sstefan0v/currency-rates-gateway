@@ -27,40 +27,21 @@
 		<url/>
 	</scm>
 	<properties>
-<!--		<apache.commons-csv.version>1.10.0</apache.commons-csv.version>-->
 		<java.version>23</java.version>
 		<projectlombok.version>1.18.34</projectlombok.version>
-		<java.version>23</java.version>
 		<jackson-datatype-jsr310.version>2.17.2</jackson-datatype-jsr310.version>
 		<postgresql.version>42.7.4</postgresql.version>
-		<jakarta.xml.bind-api.version>4.0.0</jakarta.xml.bind-api.version>
-		<jaxb-runtime.version>4.0.0</jaxb-runtime.version>
-		<jakarta.activation-api.version>2.1.0</jakarta.activation-api.version>
 	</properties>
 	<dependencies>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-web</artifactId>-->
-<!--		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-websocket</artifactId>-->
-<!--		</dependency>-->
+
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>com.fasterxml.jackson.datatype</groupId>-->
-<!--			<artifactId>jackson-datatype-jsr310</artifactId>-->
-<!--			<version>${jackson-datatype-jsr310.version}</version>-->
-<!--		</dependency>-->
-
-
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -84,27 +65,15 @@
 		</dependency>
 
 <!--		<dependency>-->
-<!--			<groupId>jakarta.xml.bind</groupId>-->
-<!--			<artifactId>jakarta.xml.bind-api</artifactId>-->
-<!--			<version>${jakarta.xml.bind-api.version}</version>-->
-<!--		</dependency>-->
-
-<!--		<dependency>-->
-<!--			<groupId>org.glassfish.jaxb</groupId>-->
-<!--			<artifactId>jaxb-runtime</artifactId>-->
-<!--			<version>${jaxb-runtime.version}</version>-->
-<!--		</dependency>-->
-
-<!--		<dependency>-->
-<!--			<groupId>jakarta.activation</groupId>-->
-<!--			<artifactId>jakarta.activation-api</artifactId>-->
-<!--			<version>${jakarta.activation-api.version}</version>-->
+<!--			<groupId>com.fasterxml.jackson.core</groupId>-->
+<!--			<artifactId>jackson-databind</artifactId>-->
 <!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
