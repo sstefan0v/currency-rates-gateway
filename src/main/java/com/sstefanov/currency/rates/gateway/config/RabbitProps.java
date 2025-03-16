@@ -1,4 +1,4 @@
-package com.sstefanov.currency.rates.gateway.configs;
+package com.sstefanov.currency.rates.gateway.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

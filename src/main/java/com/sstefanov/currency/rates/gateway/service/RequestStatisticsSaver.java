@@ -1,7 +1,7 @@
 package com.sstefanov.currency.rates.gateway.service;
 
-import com.sstefanov.currency.rates.gateway.entities.RequestInfo;
-import com.sstefanov.currency.rates.gateway.repositories.RequestInfoRepository;
+import com.sstefanov.currency.rates.gateway.entity.RequestInfo;
+import com.sstefanov.currency.rates.gateway.repository.RequestInfoRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;

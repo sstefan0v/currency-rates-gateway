@@ -1,4 +1,4 @@
-package com.sstefanov.currency.rates.gateway.entities;
+package com.sstefanov.currency.rates.gateway.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

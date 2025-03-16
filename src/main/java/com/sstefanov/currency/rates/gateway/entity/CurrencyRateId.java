@@ -1,4 +1,4 @@
-package com.sstefanov.currency.rates.gateway.entities;
+package com.sstefanov.currency.rates.gateway.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;

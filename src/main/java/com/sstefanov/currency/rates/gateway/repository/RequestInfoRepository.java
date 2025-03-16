@@ -1,6 +1,6 @@
-package com.sstefanov.currency.rates.gateway.repositories;
+package com.sstefanov.currency.rates.gateway.repository;
 
-import com.sstefanov.currency.rates.gateway.entities.RequestInfo;
+import com.sstefanov.currency.rates.gateway.entity.RequestInfo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

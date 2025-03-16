@@ -1,4 +1,4 @@
-package com.sstefanov.currency.rates.gateway.configs;
+package com.sstefanov.currency.rates.gateway.config;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

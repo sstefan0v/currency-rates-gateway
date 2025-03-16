@@ -1,6 +1,6 @@
 package com.sstefanov.currency.rates.gateway;
 
-import com.sstefanov.currency.rates.gateway.configs.RabbitProps;
+import com.sstefanov.currency.rates.gateway.config.RabbitProps;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
