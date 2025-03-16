@@ -1,7 +1,9 @@
 package com.sstefanov.currency.rates.gateway.service;
+import com.sstefanov.currency.rates.gateway.service.exception.RequestNotUniqueException;
 import com.sstefanov.currency.rates.gateway.repositories.RequestInfoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
 
 import static com.sstefanov.currency.rates.gateway.service.RequestStatisticsSaver.REQ_CACHE_KEY;
@@ -15,7 +17,7 @@ public class RequestValidator {
 
     public void validateRequest(String requestId) {
         if (isRequestRepeated(requestId)) {
-            throw new RuntimeException("RequestId WAS repeated: " + requestId);
+            throw new RequestNotUniqueException(HttpStatusCode.valueOf(400), "RequestId WAS repeated: " + requestId);
         }
     }
 

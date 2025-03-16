@@ -18,6 +18,9 @@ public class ClientIdMapper {
 
     public String getServiceIdForClientId(String clientId) {
         log.debug("Getting serviceId, for Client Id: {}", clientId);
+        if (clientId == null) {
+            return null;
+        }
         return serviceIdList.get(new Random().nextInt(serviceIdList.size()));
     }
 }

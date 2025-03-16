@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 
-//@RequestMapping(value = "/json_api" ,consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-@RequestMapping(value = "/json_api" , produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/json_api" ,consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 public class JsonApiController {
 
     private final GatewayService gatewayService;
@@ -29,24 +28,4 @@ public class JsonApiController {
         return gatewayService.process(request);
     }
 
-    @GetMapping("/test/{requestId}/{period}")
-    public Object test(@PathVariable String requestId, @PathVariable Integer period) {
-        CurrentRequest newRequest = new CurrentRequest();
-        newRequest.setRequestId(requestId);
-        newRequest.setTimestamp(System.currentTimeMillis());
-        newRequest.setClient("stefan-client");
-        newRequest.setCurrency("EUR");
-
-        if (period == 69) {
-            return getCurrent(newRequest);
-        }
-        HistoryRequest historyRequest = new HistoryRequest();
-        historyRequest.setRequestId(requestId);
-        historyRequest.setTimestamp(System.currentTimeMillis());
-        historyRequest.setClient("stefan-client");
-        historyRequest.setPeriod(period);
-        historyRequest.setCurrency("EUR");
-        return getHistory(historyRequest);
-
-    }
 }
