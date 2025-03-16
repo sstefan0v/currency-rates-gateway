@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-
 public class GatewayService {
 
     private final RequestStatisticsSaver requestStatisticsSaver;
