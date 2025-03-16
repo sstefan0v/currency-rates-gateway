@@ -9,9 +9,9 @@
         <relativePath/>
     </parent>
     <groupId>com.sstefanov</groupId>
-    <artifactId>statistics.collector</artifactId>
+    <artifactId>currency-rates-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>statistics.collector</name>
+    <name>currency-rates-gateway</name>
     <description>Demo project</description>
     <url/>
     <licenses>
