@@ -16,6 +16,7 @@ public class GatewayService {
     private final RequestStatisticsSaver requestStatisticsSaver;
     private final RequestValidator requestValidator;
     private final CurrencyRatesService currencyRatesService;
+    private final StatisticsRabbitMqSender statisticsRabbitMqSender;
 
     public CurrencyRatesRootDTO process(CurrentRequest request) {
         return process(request.getRequestId(), request.getCurrency(), request.getClient(),
@@ -39,6 +40,7 @@ public class GatewayService {
 
     private CurrencyRatesRootDTO process(String requestId, String currency, String clientId, String serviceName,
                                          Long timestamp, Integer period) {
+        statisticsRabbitMqSender.send(requestId, currency, clientId, serviceName, timestamp.toString(), period.toString());
         requestValidator.validateRequest(requestId);
         CurrencyRatesRootDTO dto = currencyRatesService.getRates(currency, period);
         requestStatisticsSaver.save(requestId, clientId, serviceName, timestamp);
